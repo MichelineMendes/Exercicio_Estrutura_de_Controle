@@ -1,5 +1,3 @@
-import javax.swing.text.StringContent;
-import java.io.StringReader;
 import java.util.Scanner;
 /*import java.util.Scanner;
 //Uma pousada estipulou o preço da diária em R$ 40,00 e mais uma taxa de serviços //diários de:
@@ -13,45 +11,29 @@ public class Exercicio007 {
 
         var leitor = new Scanner(System.in);
 
-        String opcao = "";
-        float caixa = 0.0f;
-
-        while (!opcao.equalsIgnoreCase("fim")) {
-
-
-            System.out.print("\nDigite o nome do cliente: ");
-            String nome = leitor.nextLine();
-
-            System.out.println("Digite a quantidade de diárias: ");
-            Integer dias = leitor.nextInt();
-
-            int servico1 = (15 * dias);
-            int servico2 = (8 * dias);
-            int diaria = 40;
-            int total = (dias * diaria);
-            float pagar = 0.0f;
+        String sair = "";
+        int pousada = 0;
+        int total_a_pagar = 0;
 
 
+        while (!sair.equalsIgnoreCase("fim")) {
+            System.out.print("\nDigite o nome do cliente ou fim para encerrar: ");
+            String cliente = leitor.next();
+
+            System.out.print("\nDigite a quantidade de diárias: ");
+            int dias = leitor.nextInt();
 
             if (dias < 10) {
-                pagar = total + servico2;
-                System.out.println(" O hóspede " + nome + " tem um total de despesas a pagar de: R$ " + pagar);
-
+                total_a_pagar = (dias * 40) + (dias * 8);
+                System.out.println(" O hóspede " + cliente + " tem um total de despesas a pagar de: R$ " + total_a_pagar);
 
             } else {
-                pagar = total + servico1;
-                System.out.println(" O hóspede " + nome + " tem um total de despesas a pagar de: R$ " + pagar);}
-
-            caixa = (caixa + pagar);
-            System.out.println("total" + caixa);
-
-
-            System.out.println("\nDigite fim para encerrar o programa: ");
-                opcao = leitor.nextLine();
-
-
-
+                total_a_pagar = (dias * 40) + (dias * 15);
+                System.out.println(" O hóspede " + cliente + " tem um total de despesas a pagar de: R$ " + total_a_pagar);
+            }
+            pousada = pousada + total_a_pagar;
+            System.out.println("\nO caixa da pousada tem R$ " + pousada);
 
         }
     }
-}
+    }
