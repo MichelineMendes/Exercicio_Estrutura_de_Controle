@@ -11,14 +11,14 @@ public class Exercicio007 {
 
         var leitor = new Scanner(System.in);
 
-        String sair = "";
+        String cliente = "";
         int pousada = 0;
         int total_a_pagar = 0;
 
 
-        while (!sair.equalsIgnoreCase("fim")) {
-            System.out.print("\nDigite o nome do cliente ou fim para encerrar: ");
-            String cliente = leitor.next();
+        while (!cliente.equalsIgnoreCase("fim")) {
+            System.out.print("\nDigite o nome do cliente");
+            cliente = leitor.next();
 
             System.out.print("\nDigite a quantidade de diárias: ");
             int dias = leitor.nextInt();
@@ -33,6 +33,9 @@ public class Exercicio007 {
             }
             pousada = pousada + total_a_pagar;
             System.out.println("\nO caixa da pousada tem R$ " + pousada);
+
+            System.out.print("\n\nDigite qualquer coisa para continuar ou fim para sair: ");
+            cliente = leitor.next();
 
         }
     }
