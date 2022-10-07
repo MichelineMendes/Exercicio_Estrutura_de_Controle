@@ -14,16 +14,17 @@ Exiba um relatório contendo:
 • o nome da mulher mais baixa.*/
 
    public static void main(String[] args) {
-        int i, idade_homens = 0, quant_homens= 0, quant_mulheres_altura_peso = 0, pessoa_18e25 = 0, maior_idade =0, sexo;
+        int quant_de_paciente =0, idade_homens = 0, quant_homens= 0, quant_mulheres_altura_peso = 0, pessoa_18e25 = 0, maior_idade =0, sexo;
         float menor_altura_mulher = 9.0f, media_de_homens = 0.0f;
        String nome = "", pessoa_mais_velha = "", baixinha = "";
 
         var leitor = new Scanner(System.in);
 
-       for(i = 1; !nome.equalsIgnoreCase("fim"); i++){
+       while (!nome.equalsIgnoreCase("fim")){
 
             System.out.print("\nDigite o nome do paciente ou fim para encerrar: ");
             nome = leitor.next();
+            quant_de_paciente++;
             System.out.print("\nDigite o sexo do cliente ( 1 para Masculino  ou 2 para  Feminino): ");
             sexo = leitor.nextInt();
             System.out.println("Digite a idade do paciente (anos): ");
@@ -62,9 +63,10 @@ Exiba um relatório contendo:
 
 
 
+
             }
        }
-       System.out.println( "\nA quantidade de pacientes é:  " +  (i-1));
+       System.out.println( "\nA quantidade de pacientes é:  " +  quant_de_paciente);
        System.out.println(("A média de idade dos homens é: "  + media_de_homens));
        System.out.println("A quantidade de mulheres com peso entre 1,6 e 1,7, com mais de 70kg é:  " + quant_mulheres_altura_peso) ;
        System.out.println(("A quantidade de pessoas com idade entre 18 e 25 é:  " + pessoa_18e25));
