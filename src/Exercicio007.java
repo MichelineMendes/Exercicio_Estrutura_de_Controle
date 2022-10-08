@@ -13,7 +13,7 @@ public class Exercicio007 {
 
         String cliente = "";
         int pousada = 0;
-        int total_a_pagar = 0;
+        int totalAPagar = 0;
 
 
         while (!cliente.equalsIgnoreCase("fim")) {
@@ -24,14 +24,14 @@ public class Exercicio007 {
             int dias = leitor.nextInt();
 
             if (dias < 10) {
-                total_a_pagar = (dias * 40) + (dias * 8);
-                System.out.println(" O hóspede " + cliente + " tem um total de despesas a pagar de: R$ " + total_a_pagar);
+                totalAPagar = (dias * 40) + (dias * 8);
+                System.out.println(" O hóspede " + cliente + " tem um total de despesas a pagar de: R$ " + totalAPagar);
 
             } else {
-                total_a_pagar = (dias * 40) + (dias * 15);
-                System.out.println(" O hóspede " + cliente + " tem um total de despesas a pagar de: R$ " + total_a_pagar);
+                totalAPagar = (dias * 40) + (dias * 15);
+                System.out.println(" O hóspede " + cliente + " tem um total de despesas a pagar de: R$ " + totalAPagar);
             }
-            pousada = pousada + total_a_pagar;
+            pousada = pousada + totalAPagar;
             System.out.println("\nO caixa da pousada tem R$ " + pousada);
 
             System.out.print("\n\nDigite qualquer coisa para continuar ou fim para sair: ");

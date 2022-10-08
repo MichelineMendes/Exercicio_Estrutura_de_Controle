@@ -9,7 +9,7 @@ import java.util.*;
 public class Exercicio006 {
     public static void main(String[] args) {
 
-        //foi preciso importat a biblioteca util e em seguida definit um locale para Default como ingles americano para que pudesse ser usado o ponto no lugar virgula para dados decimais.
+        //foi preciso importar a biblioteca util e em seguida definit um locale para Default como ingles americano para que pudesse ser usado o ponto no lugar virgula para dados decimais.
         //antes estava confirgurado como pt-BR e só aceitava vírgula nas casas decimais
 
         Locale locale = new Locale("en", "US");
@@ -23,8 +23,8 @@ public class Exercicio006 {
         int reprovados = 0;
         int total = 0;
         float media = 0;
-        float nova_media;
-        float notas_turma =0;
+        float novaMedia;
+        float notasTurma =0;
         System.out.println("****************************************************************************");
         System.out.println("Informe as notas dos seis alunos e verifique a média individual, a média da turma e quantos alunos foram aprovados, reprovados ou vão fazer prova final.");
 
@@ -36,27 +36,27 @@ public class Exercicio006 {
             float segunda = leitor.nextFloat();
 
 
-            nova_media = Math.round((primeira + segunda) / 2);
-            notas_turma = media + nova_media;
+            novaMedia = Math.round((primeira + segunda) / 2);
+            notasTurma = media + novaMedia;
 
-            if (nova_media > 7.0) {
+            if (novaMedia > 7.0) {
                 aprovados = aprovados + 1;
-                System.out.println("\nO aluno obteve média:  " + nova_media + "  Aluno aprovado por média!");
+                System.out.println("\nO aluno obteve média:  " + novaMedia + "  Aluno aprovado por média!");
             }
-            else if (nova_media <= 7) {
-                if (nova_media > 3) {
+            else if (novaMedia <= 7) {
+                if (novaMedia > 3) {
                     total += 1;
-                    System.out.println("\nO aluno obteve média: " + nova_media + "   Aluno fará prova final.");
-                } else if (nova_media <3) {
+                    System.out.println("\nO aluno obteve média: " + novaMedia + "   Aluno fará prova final.");
+                } else if (novaMedia <3) {
                     reprovados = reprovados + 1;
-                    System.out.println("\nO aluno obteve média: " + nova_media + "  Aluno está reprovado.");  }
+                    System.out.println("\nO aluno obteve média: " + novaMedia + "  Aluno está reprovado.");  }
             }
         }
-        float media_turma = (notas_turma / 6);
+        float mediaTurma = (notasTurma / 6);
         System.out.println("\n A seguir, os dados da turma:  ");
         System.out.println("O total de aprovados foi de : " + aprovados);
         System.out.println("O total de reprovados foi de : " + reprovados);
         System.out.println("O total de alunos em recuperação: " + total);
-        System.out.println("\nA média total da  turma foi de : " + media_turma);
+        System.out.println("\nA média total da  turma foi de : " + mediaTurma);
      }
 }

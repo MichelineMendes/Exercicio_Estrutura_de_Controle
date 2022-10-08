@@ -18,18 +18,18 @@ public class Exercicio004 {
         Integer lata = leitor.nextInt();
 
         float abastece = 2.5f;
-        float refri = 3.0f;
-        float total_gasolina = (abastece * litros);
-        float total_conveniencia = (lata * refri);
-        float total =  total_gasolina + total_conveniencia;
+        float refrigerante = 3.0f;
+        float totalGasolina = (abastece * litros);
+        float totalConveniencia = (lata * refrigerante);
+        float total =  totalGasolina + totalConveniencia;
 
         System.out.println("------------------------------");
         System.out.println("       CUPOM FISCAL           ");
         System.out.println("------------------------------");
         System.out.println("001 - GASOLINA COMUM .............");
-        System.out.println( litros + " litros  x  R$ " + abastece + ".... R$" + total_gasolina  );
+        System.out.println( litros + " litros  x  R$ " + abastece + ".... R$" + totalGasolina  );
         System.out.println("\n002 - REFRIGERANTE EM LATA 350 ML ");
-        System.out.println( lata + " latas  x  R$ " + refri + "....... R$" + total_conveniencia );
+        System.out.println( lata + " latas  x  R$ " + refrigerante + "....... R$" + totalConveniencia );
         System.out.println("\nTOTAL  A PAGAR R$ " + total);
 
 
